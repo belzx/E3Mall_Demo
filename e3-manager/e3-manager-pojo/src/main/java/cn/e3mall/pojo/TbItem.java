@@ -1,9 +1,26 @@
 package cn.e3mall.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class TbItem {
-    private Long id;
+public class TbItem implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	@Override
+	public String toString() {
+		return "TbItem [id=" + id + ", title=" + title + ", sellPoint=" + sellPoint + ", price=" + price + ", num="
+				+ num + ", barcode=" + barcode + ", image=" + image + ", cid=" + cid + ", status=" + status
+				+ ", created=" + created + ", updated=" + updated + "]";
+	}
+
+	private Long id;
 
     private String title;
 
